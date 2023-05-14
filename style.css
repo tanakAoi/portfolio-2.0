@@ -127,6 +127,8 @@ li {
 }
 
 .header {
+  position: fixed;
+  z-index: 9;
   min-height: 80px;
   background-color: transparent;
 }
@@ -140,6 +142,38 @@ li {
   gap: var(--gap-m);
   font-weight: 500;
   font-size: 1.2rem;
+}
+.hero {
+  height: 100vh;
+  background-color: var(--color-accent);
+}
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero__title {
+  padding-top: var(--section-gap-inner);
+}
+.hero__title::after {
+  content: url(src/assets/icons/hello.svg);
+  display: block;
+  opacity: 0.2;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(1500px);
+  }
+  100% {
+    transform: translateX(-1500px);
+  }
+}
+.hero__text {
+  font-family: var(--font-sans);
+  margin-left: auto;
+  max-width: 35rem;
+  width: 100%;
+  line-height: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

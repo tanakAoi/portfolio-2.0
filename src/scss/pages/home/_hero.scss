@@ -1,3 +1,44 @@
 .hero {
-    // background-color: black;
+    height: 100vh;
+    background-color: var(--color-accent);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        padding-top: var(--section-gap-inner);
+
+        &::after {
+            content: url(src/assets/icons/hello.svg);
+            display: block;
+            opacity: 0.2;
+            // animation: slide 15s linear infinite;
+
+            @keyframes slide {
+            
+                0% {
+                    transform: translateX(1500px);
+                }
+            
+                100% {
+                    transform: translateX(-1500px);
+                }
+            
+            }
+        }
+
+
+    }
+
+    &__text {
+        font-family: var(--font-sans);
+        margin-left: auto;
+        max-width: 35rem;
+        width: 100%;
+        line-height: 2;
+
+    }
 }
