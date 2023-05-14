@@ -1,10 +1,18 @@
 .header,
 .hero,
-.about,
-.contact,
 .footer {
     display: grid;
     grid-template-columns: var(--grid-container);
+
+    &__inner {
+        grid-column: inner;
+    }
+}
+
+.about,
+.contact {
+    display: grid;
+    grid-template-columns: var(--grid-container-main);
 
     &__inner {
         grid-column: inner;
