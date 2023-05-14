@@ -1,0 +1,12 @@
+.header,
+.hero,
+.about,
+.contact,
+.footer {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner {
+        grid-column: inner;
+    }
+}

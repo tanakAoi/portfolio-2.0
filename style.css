@@ -43,6 +43,8 @@
   --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
   --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
   --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
+  --page-width: 85rem;
+  --grid-container: [full-start] minmax(3rem, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(3rem, 1fr) [full-end];
 }
 
 * {
@@ -104,6 +106,22 @@ a:hover {
 
 li {
   line-height: var(--line-height);
+}
+
+.header,
+.hero,
+.about,
+.contact,
+.footer {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+.header__inner,
+.hero__inner,
+.about__inner,
+.contact__inner,
+.footer__inner {
+  grid-column: inner;
 }
 
 /*# sourceMappingURL=style.css.map */
