@@ -1,0 +1,28 @@
+.header {
+    min-height: 80px;
+    background-color: transparent;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+
+    }
+
+    &__menu {
+        display: flex;
+        gap: var(--gap-m);
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    
+    &__item {
+    }
+    
+    &__link {
+        
+    }
+}

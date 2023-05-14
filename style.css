@@ -62,6 +62,7 @@ img {
 
 body {
   font-family: var(--font-sans);
+  font-size: var(--font-size-1);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -101,10 +102,11 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-300);
 }
 
 li {
+  list-style: none;
   line-height: var(--line-height);
 }
 
@@ -122,6 +124,22 @@ li {
 .contact__inner,
 .footer__inner {
   grid-column: inner;
+}
+
+.header {
+  min-height: 80px;
+  background-color: transparent;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu {
+  display: flex;
+  gap: var(--gap-m);
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
