@@ -1,42 +1,42 @@
 :root {
-  --section-gap: 8rem;
+  --section-gap: 10rem;
   --section-gap-inner: calc( var(--section-gap) * 0.75 );
   --gap-xl: 4rem;
   --gap-l: 3rem;
   --gap-m: 2rem;
   --gap-s: 1rem;
-  --border-radius: 0px;
-  --color-dark: #222;
-  --color-dark-200:#444;
-  --color-dark-300:#666;
-  --color-dark-500:#888;
-  --color-dark-600:#999;
-  --color-dark-700:#b5b5b5;
-  --color-dark-800:#d5d5d5;
-  --color-dark-900:#f1f1f1;
-  --color-accent: #009fbb;
-  --color-accent-200: #009fbb;
-  --color-accent-300: #009fbb;
-  --color-accent-400: #009fbb;
-  --color-accent-500: #009fbb;
-  --color-accent-600: #009fbb;
-  --color-accent-700: #009fbb;
-  --color-accent-800: #009fbb;
-  --color-accent-900: #009fbb;
-  --color-light: #efead8;
-  --color-light-200: #efead8;
-  --color-light-300: #efead8;
-  --color-light-400: #efead8;
-  --color-light-500: #efead8;
-  --color-light-600: #efead8;
-  --color-light-700: #efead8;
-  --color-light-800: #efead8;
-  --color-light-900: #efead8;
-  --font-sans: "Arial", sans-serif;
-  --font-serif: "Georgia", serif;
-  --line-height: 1.5;
+  --color-dark: hsl(0, 0%, 13%);
+  --color-dark-200:hsl(0, 0%, 23%);
+  --color-dark-300:hsl(0, 0%, 33%);
+  --color-dark-500:hsl(0, 0%, 43%);
+  --color-dark-600:hsl(0, 0%, 53%);
+  --color-dark-700:hsl(0, 0%, 63%);
+  --color-dark-800:hsl(0, 0%, 73%);
+  --color-dark-900:hsl(0, 0%, 83%);
+  --color-accent-100: hsl(180, 43%, 16%);
+  --color-accent-200: hsl(180, 43%, 26%);
+  --color-accent-300: hsl(180, 43%, 36%);
+  --color-accent-400: hsl(180, 43%, 46%);
+  --color-accent: hsl(180, 43%, 56%);
+  --color-accent-600: hsl(180, 43%, 66%);
+  --color-accent-700: hsl(180, 43%, 76%);
+  --color-accent-800: hsl(180, 43%, 86%);
+  --color-accent-900: hsl(180, 43%, 96%);
+  --color-light: hsl(0, 0%, 95%);
+  --color-light-200: hsl(0, 0%, 85%);
+  --color-light-300: hsl(0, 0%, 75%);
+  --color-light-400: hsl(0, 0%, 65%);
+  --color-light-500: hsl(0, 0%, 55%);
+  --color-light-600: hsl(0, 0%, 45%);
+  --color-light-700: hsl(0, 0%, 35%);
+  --color-light-800: hsl(0, 0%, 25%);
+  --color-light-900: hsl(0, 0%, 15%);
+  --font-sans: "futura-pt", sans-serif;
+  --font-serif: "belarius-poster", serif;
+  --font-japanese: "ab-doudoukaisyo", "sans-serif";
+  --line-height: 1.8;
   --font-scale: 1.25;
-  --font-size: 1rem;
+  --font-size: 1.5rem;
   --font-size-1: var(--font-size);
   --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
   --font-size-3: calc( var(--font-size-2) * var(--font-scale) );
@@ -66,6 +66,30 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
 
+h1 {
+  font-size: var(--font-size-6);
+}
+
+h2 {
+  font-size: var(--font-size-5);
+}
+
+h3 {
+  font-size: var(--font-size-4);
+}
+
+h4 {
+  font-size: var(--font-size-3);
+}
+
+h5 {
+  font-size: var(--font-size-2);
+}
+
+h6 {
+  font-size: var(--font-size-1);
+}
+
 p {
   line-height: var(--line-height);
 }
@@ -80,26 +104,6 @@ a:hover {
 
 li {
   line-height: var(--line-height);
-}
-
-.test {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  padding: 1rem 2rem;
-  border: 0;
-  border-radius: 2rem;
-  font-size: 1rem;
-  font-weight: 700;
-  display: inline-block;
-  text-decoration: none;
-}
-.test:hover {
-  background-color: var(--color-accent);
-  color: var(--color-light);
-}
-
-.hero {
-  background-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
