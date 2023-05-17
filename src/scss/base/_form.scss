@@ -1,0 +1,54 @@
+@use '../components/buttons' as button;
+
+::placeholder {
+    color: var(--color-dark-500);
+    font-family: var(--font-sans);
+}
+
+input {
+
+    &[type="text"],
+    &[type="email"] {
+
+        max-width: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 3px;
+        background-color: var(--color-light-200);
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        color: var(--color-dark);
+        font-family: var(--font-sans);
+        font-weight: 500;
+
+        &:focus {
+            outline: 0;
+            border-color: var(--color-accent);
+        }
+    }
+
+}
+
+textarea {
+    max-width: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--color-light-200);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: var(--color-dark);
+    resize: none;
+    font-family: var(--font-sans);
+    font-weight: 500;
+
+    &:focus {
+        outline: 0;
+        border-color: var(--color-accent);
+    }
+    
+}
+
+button {
+    @include button.default();
+}

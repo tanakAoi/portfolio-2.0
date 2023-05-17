@@ -7,6 +7,10 @@ body {
     padding: 0;
 }
 
+p {
+    margin: 0;
+}
+
 figure {
     margin: 0;
 }
@@ -14,4 +18,9 @@ figure {
 img {
     max-width: 100%;
     display: block;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
 }

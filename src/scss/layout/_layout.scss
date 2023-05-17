@@ -18,3 +18,9 @@
         grid-column: inner;
     }
 }
+
+.about,
+.contact,
+.footer {
+    margin-top: var(--section-gap);
+}
