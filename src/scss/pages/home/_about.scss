@@ -3,18 +3,15 @@
     &__inner {
         display: flex;
         flex-direction: column;
-        gap: var(--gap-xl);
+        gap: var(--section-gap-inner);
     }
 
-    &__skills {
+    &__skills,
+    &__ability {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: var(--gap-xl);
-
-    }
-
-    &__wicd {
-
     }
 
 }
@@ -22,7 +19,10 @@
 .skills {
     
     &__title {
+        max-width: 60rem;
+        width: 100%;
         line-height: 2;
+        // text-align: center;
     }
     
     &__content {
@@ -105,10 +105,10 @@
 
 }
 
-.wicd {
+.ability {
     
     &__title {
-        margin-bottom: var(--gap-xl);
+        
     }
     
     &__content {

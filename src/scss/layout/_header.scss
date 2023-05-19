@@ -1,8 +1,11 @@
 .header {
     position: fixed;
     z-index: 9;
-    min-height: 80px;
+    height: 80px;
     background-color: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
 
     &__inner {
         display: flex;
