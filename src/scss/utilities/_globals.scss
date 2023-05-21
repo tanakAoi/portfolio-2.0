@@ -39,7 +39,6 @@
 
     --font-sans: 'futura-pt', sans-serif;
     --font-serif: 'belarius-poster', serif;
-    --font-japanese: 'ab-doudoukaisyo', 'sans-serif';
 
     --line-height: 1.8;
 
@@ -54,6 +53,5 @@
     --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
 
     --page-width: 85rem;
-    --grid-container: [full-start] minmax(3rem, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(3rem, 1fr) [full-end];
-    --grid-container-main: [full-start] minmax(6rem, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(6rem, 1fr) [full-end];
+    --grid-container: [full-start] minmax(6rem, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(6rem, 1fr) [full-end];
 }

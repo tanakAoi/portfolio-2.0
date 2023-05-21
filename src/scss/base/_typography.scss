@@ -1,6 +1,7 @@
 body {
     font-family: var(--font-sans);
     font-size: var(--font-size-1);
+    color: var(--color-dark);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,12 +42,11 @@ a {
     text-decoration: none;
 
     &:hover {
-        color: var(--color-accent-300);
+        color: var(--color-accent);
     }
 
 }
 
 li {
-    list-style: none;
     line-height: var(--line-height);
 }

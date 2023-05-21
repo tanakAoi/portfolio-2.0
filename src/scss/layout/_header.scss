@@ -18,13 +18,20 @@
     }
 
     &__menu {
+        list-style: none;
         display: flex;
+        align-items: center;
         gap: var(--gap-m);
         font-weight: 500;
         font-size: 1.2rem;
     }
     
+}
+
+.menu {
+    
     &__item {
+        cursor: pointer;
     }
     
     &__link {

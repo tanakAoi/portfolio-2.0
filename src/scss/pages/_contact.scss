@@ -1,10 +1,9 @@
 .contact {
 
-
     &__inner {
         display: flex;
         justify-content: space-between;
-        gap: var(--gap-xl);
+        // gap: var(--gap-l);
     }
 
     &__message {

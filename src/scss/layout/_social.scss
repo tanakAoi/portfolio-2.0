@@ -4,8 +4,23 @@
     gap: var(--gap-m);
 
     &__list {
+        list-style: none;
         display: flex;
         align-items: center;
         gap: var(--gap-m);
+    }
+
+    &__item {
+
+
+    }
+
+    &__link {
+
+        svg {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+
     }
 }

@@ -1,6 +1,5 @@
 .hero {
     height: 100vh;
-    background-color: var(--color-accent);
 
     &__inner {
         display: flex;
@@ -10,27 +9,27 @@
 
     &__title {
         padding-top: var(--section-gap-inner);
+        font-size: 20rem; // temp
+        font-weight: 700;
+        width: 100%;
+        background: linear-gradient(135deg, rgba(96,191,191,1) 0%, rgba(96,133,193,1) 25%, rgba(247,245,98,1) 50%, rgba(238,102,133,1) 75%, rgba(242,242,242,1) 100%);
+        background-size: 500%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: bggradient 40s infinite;
 
-        &::after {
-            content: url(src/assets/icons/hello.svg);
-            display: block;
-            opacity: 0.2;
-            // animation: slide 15s linear infinite;
-
-            @keyframes slide {
-            
-                0% {
-                    transform: translateX(1500px);
-                }
-            
-                100% {
-                    transform: translateX(-1500px);
-                }
-            
+        @keyframes bggradient{
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
             }
         }
-
-
     }
 
     &__text {
@@ -39,6 +38,5 @@
         max-width: 35rem;
         width: 100%;
         line-height: 2;
-
     }
 }

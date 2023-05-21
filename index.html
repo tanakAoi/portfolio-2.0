@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://use.typekit.net/oqw7gwu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
+    <script src="src/js/darkMode.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -18,7 +20,7 @@
                 <ul class="header__menu">
                     <li class="menu__item"><a href="#about" class="menu__link">About me</a></li>
                     <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">dark_mode</a></li>
+                    <span class="menu__item mode-toggle material-symbols-outlined">dark_mode</span>
                 </ul>
             </div>
         </header>
@@ -26,9 +28,8 @@
         <!-- Hero -->
         <div class="hero">
             <div class="hero__inner">
-                <div class="hero__title"></div>
+                <div class="hero__title">HELLO.</div>
                 <h5 class="hero__text">Front-end development & Web design. Based in Falun, Sweden.</h5>
-                <footer class="hero__footer"></footer>
             </div>
         </div>
 
@@ -36,11 +37,22 @@
         <div id="about" class="about">
             <div class="about__inner">
 
+                <div class="about__intro">
+                    <h5 class="intro__title">Welcome to my portfolio site! My name is Aoi Tanaka.</h5>
+                    <ul class="intro__list intro__list--open">
+                        <li class="intro__item">I was born in Japan and currently I'm living in Falun, Sweden.</li>
+                        <li class="intro__item">Before I came to Sweden, I studied swedish history and took bachelor & master's degree.</li>
+                        <li class="intro__item">I've worked as kitchen assistant, sales person, teacher in Swedish etc.</li>
+                        <li class="intro__item">I love cooking, baking, reading, online shopping and sleeping.</li>
+                        <li class="intro__item">My dream is to work as web developer / web designer.</li>
+                    </ul>
+                </div>
+
                 <div class="about__skills">
-                    <h4 class="skills__title">I've studied web development & web design 1-year and learned about these things;</h4>
+                    <h5 class="skills__title">I've studied web development & web design 1-year and learned about these things;</h5>
                     <div class="skills__content">
                         <div class="skills__webdev">
-                            <h5 class="webdev__title">Web Development</h5>
+                            <h6 class="webdev__title">Web Development</h6>
                             <ul class="webdev__list">
                                 <li class="webdev__item">HTML</li>
                                 <li class="webdev__item">CSS  (Scss/sass)</li>
@@ -52,7 +64,7 @@
                             </ul>
                         </div>
                         <div class="skills__design">
-                            <h5 class="design__title">Web Design</h5>
+                            <h6 class="design__title">Web Design</h6>
                             <ul class="design__list">
                                 <li class="design__item">Adobe XD</li>
                                 <li class="design__item">Adobe Illustrator</li>
@@ -63,7 +75,7 @@
                 </div>
 
                 <div class="about__ability">
-                    <h4 class="ability__title">What I can do now;</h4>
+                    <h5 class="ability__title">What I can do now;</h5>
                     <div class="ability__content">
                         <div class="card">
                             <h5 class="card__title card__title--dark">Design</h5>

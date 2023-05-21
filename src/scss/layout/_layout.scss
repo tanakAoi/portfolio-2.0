@@ -1,5 +1,7 @@
 .header,
 .hero,
+.about,
+.contact,
 .footer {
     display: grid;
     grid-template-columns: var(--grid-container);
@@ -11,16 +13,9 @@
 
 .about,
 .contact {
-    display: grid;
-    grid-template-columns: var(--grid-container-main);
-
-    &__inner {
-        grid-column: inner;
-    }
+    padding-top: var(--section-gap);
 }
 
-.about,
-.contact,
-.footer {
-    margin-top: var(--section-gap);
+.contact {
+    padding-bottom: var(--section-gap);
 }
