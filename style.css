@@ -55,17 +55,21 @@ body {
   padding: 0;
   background-color: var(--color-light);
   color: var(--color-dark);
+  transition: all 0.4s;
 }
 
 body.dark {
   background-color: var(--color-dark);
   color: var(--color-light);
 }
-body.dark a {
+body.dark .menu__link {
   color: var(--color-light);
 }
-body.dark a:hover {
+body.dark .menu__link:hover {
   color: var(--color-accent);
+}
+body.dark .title__icon path {
+  fill: #f2f2f2;
 }
 
 p {
@@ -348,29 +352,56 @@ li {
   flex-direction: column;
   gap: var(--section-gap-inner);
 }
-.about__intro, .about__skills, .about__ability {
+.about__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__skills, .about__ability {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--gap-xl);
 }
 
+.intro__title {
+  padding-bottom: var(--gap-xl);
+}
 .intro__text {
   font-weight: 700;
-  text-align: left;
+  padding-bottom: var(--gap-m);
+  position: relative;
+}
+.intro__button {
+  position: absolute;
+  padding-left: 5px;
+  top: 7px;
+  cursor: pointer;
+  animation: movingbutton 0.8s infinite;
+}
+@keyframes movingbutton {
+  0% {
+    top: 7px;
+  }
+  100% {
+    top: 15px;
+  }
 }
 .intro__list {
-  position: relative;
-  margin-top: 4rem;
+  margin-left: 5rem;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: all 0.5s;
 }
-.intro__list::before {
-  content: "Now 5 facts about me:";
-  font-weight: 700;
-  display: inline-block;
-  padding-bottom: var(--gap-m);
-  position: absolute;
-  top: -3rem;
-  left: -1.5rem;
+.intro__list--open {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+.intro__item {
+  margin-bottom: 0.8rem;
 }
 
 .skills__title {
@@ -397,14 +428,6 @@ li {
   display: flex;
   flex-direction: column;
   gap: var(--gap-s);
-}
-.webdev__title::before {
-  content: url(src/assets/icons/laptop-code-solid.svg);
-  display: block;
-}
-.design__title::before {
-  content: url(src/assets/icons/palette-solid.svg);
-  display: inline-block;
 }
 .ability__content {
   display: grid;

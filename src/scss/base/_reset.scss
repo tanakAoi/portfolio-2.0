@@ -7,18 +7,24 @@ body {
     padding: 0;
     background-color: var(--color-light);
     color: var(--color-dark);
+    transition: all 0.4s;
+
 }
 
 body.dark {
     background-color: var(--color-dark);
     color: var(--color-light);
 
-    a {
+    .menu__link {
         color: var(--color-light);
 
         &:hover {
             color: var(--color-accent);
         }
+    }
+    
+    .title__icon path {
+        fill: #f2f2f2;
     }
 }
 

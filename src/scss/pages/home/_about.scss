@@ -6,7 +6,12 @@
         gap: var(--section-gap-inner);
     }
 
-    &__intro,
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__skills,
     &__ability {
         display: flex;
@@ -19,24 +24,55 @@
 
 .intro {
 
+    &__title {
+        padding-bottom: var(--gap-xl);
+    }
+    
     &__text {
         font-weight: 700;
-        text-align: left;
+        padding-bottom: var(--gap-m);
+        position: relative;
+    }
+
+    &__button {
+        position: absolute;
+        padding-left: 5px;
+        top: 7px;
+        cursor: pointer;
+        animation: movingbutton 0.8s infinite;
+        
+       @keyframes movingbutton {
+
+        0% {
+            top: 7px;
+        }
+
+        100% {
+            top: 15px;
+        }
+        
+       } 
+
     }
 
     &__list {
-        position: relative;
-        margin-top: 4rem;
+        margin-left: 5rem;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        transition: all 0.5s;
 
-        &::before {
-            content: 'Now 5 facts about me:';
-            font-weight: 700;
-            display: inline-block;
-            padding-bottom: var(--gap-m);
-            position: absolute;
-            top: -3rem;
-            left: -1.5rem;
+        &--open {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
         }
+
+    }
+
+    &__item {
+        margin-bottom: 0.8rem;
     }
 }
 
@@ -92,11 +128,6 @@
 .webdev {
 
     &__title {
-
-        &::before {
-            content: url(src/assets/icons/laptop-code-solid.svg);
-            display: block;
-        }
     }
 
     &__list {
@@ -112,11 +143,6 @@
 .design {
 
     &__title {
-        
-        &::before {
-            content: url(src/assets/icons/palette-solid.svg);
-            display: inline-block;
-        }
 
     }
 
