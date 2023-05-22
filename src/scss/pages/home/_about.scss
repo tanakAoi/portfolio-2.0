@@ -56,7 +56,8 @@
     }
 
     &__list {
-        margin-left: 5rem;
+        list-style: none;
+        margin-left: 7.5rem;
         opacity: 0;
         visibility: hidden;
         height: 0;
@@ -72,6 +73,15 @@
 
     &__item {
         margin-bottom: 0.8rem;
+        position: relative;
+        
+        &::before {
+            content: "😎";
+            display: inline-block;
+            position: absolute;
+            top: 1.5px;
+            left: -45px;
+        }
     }
 }
 
@@ -119,7 +129,38 @@
     }
 
     &__item {
+        width: fit-content;
+        position: relative;
 
+        &::after {
+            content: '';
+            display: none;
+            width: 130%;
+            height: 20px;
+            opacity: 0.75;
+            position: absolute;
+            top: 25px;
+            left: -2px;
+            z-index: -1;
+            animation: highlighter 0.5s;
+            
+            @keyframes highlighter {
+                
+                0% {
+                    width: 0;
+                }
+                
+                100% {
+                    width: 130%;
+                }
+
+            }
+
+        }
+
+        &:hover::after {
+            display: block;
+        }
     }
 
 }
@@ -134,6 +175,35 @@
     }
 
     &__item {
+        
+        &:nth-of-type(1):hover::after {
+            background-color: #E44D26;
+        }
+
+        &:nth-of-type(2):hover::after {
+            background-color: #CD6799;
+        }
+
+        &:nth-of-type(3):hover::after {
+            background-color: #b84dff;
+        }
+
+        &:nth-of-type(4):hover::after {
+            background-color: #F0DB4F;
+        }
+        
+        &:nth-of-type(5):hover::after {
+            background-color: #AEB2D5;
+        }
+
+        &:nth-of-type(6):hover::after {
+            background-color: #00749C;
+            opacity: 0.5;
+        }
+
+        &:nth-of-type(7):hover::after {
+            background-color: #F29111;
+        }
 
     }
 
@@ -150,6 +220,18 @@
     }
 
     &__item {
+        
+        &:nth-of-type(1):hover::after {
+            background-color: #dd47dd;
+        }
+
+        &:nth-of-type(2):hover::after {
+            background-color: #f08d1c;
+        }
+
+        &:nth-of-type(3):hover::after {
+            background-color: #35cbf4;
+        }
 
     }
 
