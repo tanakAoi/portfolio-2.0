@@ -63,7 +63,6 @@
         transition: all 0.5s;
 
         &--open {
-            display: block;
             opacity: 1;
             visibility: visible;
             height: 100%;
@@ -180,11 +179,15 @@
 
         .card__overlay,
         .card__text {
-            display: block;
+            // display: block;
+            opacity: 1;
+            visibility: visible;
         }
 
         .card__title {
-            display: none;
+            // display: none;
+            opacity: 0;
+            visibility: hidden;
         }
 
     }
@@ -192,6 +195,9 @@
     &__title {
         position: absolute;
         color: var(--color-light);
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s;
 
         &--dark {
             color: var(--color-dark);
@@ -205,7 +211,9 @@
         bottom: 0;
         right: 0;
         left: 0;
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
     }
     
     &__image {
@@ -222,8 +230,9 @@
         position: absolute;
         padding: 2rem;
         color: var(--color-light);
-        display: none;
-
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
     }
 
 }

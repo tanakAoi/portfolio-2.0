@@ -38,13 +38,8 @@ p {
 }
 
 a {
-    color: var(--color-dark);
+    // color: var(--color-dark);
     text-decoration: none;
-
-    &:hover {
-        color: var(--color-accent);
-    }
-
 }
 
 li {

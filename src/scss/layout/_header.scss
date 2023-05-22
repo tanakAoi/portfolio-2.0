@@ -1,11 +1,30 @@
 .header {
     position: fixed;
     z-index: 9;
-    height: 80px;
+    height: 100px;
     background-color: transparent;
     top: 0;
     left: 0;
     right: 0;
+    transition: all 0.3s;
+
+    &--scroll {
+        opacity: 0;
+        visibility: hidden;
+        
+        .menu__link:hover {
+            color: var(--color-accent-400);
+        }
+
+    }
+
+    &--show {
+        height: 70px;
+        background-color: rgba(96, 191, 191, 0.5);
+        backdrop-filter: blur(12px);
+        opacity: 1;
+        visibility: visible;
+    }
 
     &__inner {
         display: flex;
@@ -35,6 +54,11 @@
     }
     
     &__link {
+        color: var(--color-dark);
+        
+        &:hover {
+            color: var(--color-accent);
+        }
         
     }
 }

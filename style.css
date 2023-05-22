@@ -186,11 +186,7 @@ p {
 }
 
 a {
-  color: var(--color-dark);
   text-decoration: none;
-}
-a:hover {
-  color: var(--color-accent);
 }
 
 li {
@@ -225,11 +221,26 @@ li {
 .header {
   position: fixed;
   z-index: 9;
-  height: 80px;
+  height: 100px;
   background-color: transparent;
   top: 0;
   left: 0;
   right: 0;
+  transition: all 0.3s;
+}
+.header--scroll {
+  opacity: 0;
+  visibility: hidden;
+}
+.header--scroll .menu__link:hover {
+  color: var(--color-accent-400);
+}
+.header--show {
+  height: 70px;
+  background-color: rgba(96, 191, 191, 0.5);
+  backdrop-filter: blur(12px);
+  opacity: 1;
+  visibility: visible;
 }
 .header__inner {
   display: flex;
@@ -248,6 +259,13 @@ li {
 .menu__item {
   cursor: pointer;
 }
+.menu__link {
+  color: var(--color-dark);
+}
+.menu__link:hover {
+  color: var(--color-accent);
+}
+
 .social {
   display: flex;
   align-items: center;
@@ -395,7 +413,6 @@ li {
   transition: all 0.5s;
 }
 .intro__list--open {
-  display: block;
   opacity: 1;
   visibility: visible;
   height: 100%;
@@ -443,14 +460,19 @@ li {
 }
 .card:hover .card__overlay,
 .card:hover .card__text {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .card:hover .card__title {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .card__title {
   position: absolute;
   color: var(--color-light);
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
 }
 .card__title--dark {
   color: var(--color-dark);
@@ -462,7 +484,9 @@ li {
   bottom: 0;
   right: 0;
   left: 0;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
 }
 .card__image {
   height: 100%;
@@ -476,7 +500,9 @@ li {
   position: absolute;
   padding: 2rem;
   color: var(--color-light);
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
 }
 
 .contact__inner {
