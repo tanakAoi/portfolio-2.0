@@ -79,3 +79,26 @@
         padding-bottom: 2rem;
     }
 }
+
+.scroll-to-top {
+    z-index: 99;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--color-light);
+    padding: 0.8rem 0.8rem 0.4rem 0.8rem;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &--show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
