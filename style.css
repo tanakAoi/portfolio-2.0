@@ -251,6 +251,10 @@ li {
   opacity: 0;
   visibility: hidden;
 }
+.header--scroll .header__logo {
+  opacity: 1;
+  visibility: visible;
+}
 .header--scroll .menu__link:hover {
   color: var(--color-light);
 }
@@ -271,12 +275,13 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-.header__icon {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  color: var(--color-dark);
+.header__logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
 }
-.header__icon:hover {
+.header__logo:hover {
   opacity: 0.7;
 }
 .header__menu {
@@ -385,6 +390,27 @@ li {
   font-size: 1.1rem;
   text-align: center;
   padding-bottom: 2rem;
+}
+
+.scroll-to-top {
+  z-index: 99;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--color-light);
+  padding: 0.8rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+.scroll-to-top svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.scroll-to-top--show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .hero {

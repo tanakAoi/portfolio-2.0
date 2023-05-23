@@ -13,6 +13,11 @@
     &--scroll {
         opacity: 0;
         visibility: hidden;
+
+        .header__logo {
+            opacity: 1;
+            visibility: visible;
+        }
         
         .menu__link:hover {
             color: var(--color-light);
@@ -38,10 +43,11 @@
         align-items: center;
     }
 
-    &__icon {
-        font-family: var(--font-serif);
-        font-weight: 700;
-        color: var(--color-dark);
+    &__logo {
+        width: 2.5rem;
+        height: 2.5rem;
+        opacity: 0;
+        visibility: hidden;
 
         &:hover {
             opacity: 0.7;
