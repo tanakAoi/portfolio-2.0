@@ -339,6 +339,11 @@ li {
   right: 1rem;
   border: 2px solid rgba(34, 34, 34, 0.8);
 }
+@media screen and (max-width: 39rem) {
+  .footer::after {
+    display: none;
+  }
+}
 .footer__inner {
   padding-top: var(--section-gap-inner);
   display: flex;

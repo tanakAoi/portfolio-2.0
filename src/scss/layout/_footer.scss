@@ -13,6 +13,10 @@
         left: 1rem;
         right: 1rem;
         border: 2px solid rgba(34, 34, 34, 0.8);
+
+        @include responsive.max(39rem) {
+            display: none;
+        }
     }
 
     &__inner {
