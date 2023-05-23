@@ -1,3 +1,5 @@
+@use '../utilities/responsive';
+
 .header {
     position: fixed;
     z-index: 9;
@@ -13,7 +15,11 @@
         visibility: hidden;
         
         .menu__link:hover {
-            color: var(--color-accent-400);
+            color: var(--color-light);
+        }
+         
+        @include responsive.max(39rem) {
+            display: none;
         }
 
     }
@@ -33,7 +39,13 @@
     }
 
     &__icon {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        color: var(--color-dark);
 
+        &:hover {
+            opacity: 0.7;
+        }
     }
 
     &__menu {

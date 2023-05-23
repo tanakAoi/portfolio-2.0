@@ -54,4 +54,5 @@
 
     --page-width: 85rem;
     --grid-container: [full-start] minmax(6rem, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(6rem, 1fr) [full-end];
+    --grid-container-mobile: [full-start] minmax(3rem, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(3rem, 1fr) [full-end];
 }

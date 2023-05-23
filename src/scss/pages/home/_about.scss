@@ -1,23 +1,35 @@
+@use '../../utilities/responsive';
+
 .about {
 
     &__inner {
         display: flex;
         flex-direction: column;
         gap: var(--section-gap-inner);
+
+        @include responsive.max(39rem) {
+            gap: var(--gap-xl);
+        }
     }
 
-    &__intro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+    &__intro,
     &__skills,
     &__ability {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    &__intro {
+    }
+
+    &__skills,
+    &__ability {
         gap: var(--gap-xl);
+        
+        @include responsive.max(39rem) {
+            gap: var(--gap-l);
+        }
     }
 
 }
@@ -26,6 +38,13 @@
 
     &__title {
         padding-bottom: var(--gap-xl);
+        text-align: center;
+        line-height: 2;
+
+        @include responsive.max(64rem) {
+            max-width: 30rem;
+            width: 100%;
+        }
     }
     
     &__text {
@@ -39,9 +58,9 @@
         padding-left: 5px;
         top: 7px;
         cursor: pointer;
-        animation: movingbutton 0.8s infinite;
+        animation: moving-arrow 0.8s infinite;
         
-       @keyframes movingbutton {
+       @keyframes moving-arrow {
 
         0% {
             top: 7px;
@@ -52,6 +71,10 @@
         }
         
        } 
+                  
+       @include responsive.max(39rem) {
+        display: none;
+    }
 
     }
 
@@ -64,6 +87,13 @@
         transition: all 0.5s;
 
         &--open {
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+        }
+                  
+        @include responsive.max(39rem) {
+            margin-left: 3rem;
             opacity: 1;
             visibility: visible;
             height: 100%;
@@ -82,16 +112,22 @@
             top: 1.5px;
             left: -45px;
         }
+
     }
 }
 
 .skills {
     
     &__title {
-        max-width: 60rem;
+        max-width: 50rem;
         width: 100%;
-        line-height: 2;
+        line-height: 2.2;
         text-align: center;
+        
+        @include responsive.max(54rem) {
+            font-size: 1.8rem;
+        }
+         
     }
     
     &__content {
@@ -99,6 +135,11 @@
         align-items: flex-start;
         justify-content: center;
         gap: var(--section-gap);
+        
+        @include responsive.max(54rem) {
+            flex-direction: column;
+            gap: var(--gap-xl);
+        }
 
     }
 
@@ -240,7 +281,6 @@
 .ability {
     
     &__title {
-        
     }
     
     &__content {
@@ -261,13 +301,11 @@
 
         .card__overlay,
         .card__text {
-            // display: block;
             opacity: 1;
             visibility: visible;
         }
 
         .card__title {
-            // display: none;
             opacity: 0;
             visibility: hidden;
         }

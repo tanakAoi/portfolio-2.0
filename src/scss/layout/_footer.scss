@@ -1,3 +1,5 @@
+@use '../utilities/responsive';
+
 .footer {
     background-color: var(--color-accent);
     color: var(--color-dark);
@@ -18,16 +20,22 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: var(--gap-m);
+        gap: var(--gap-xl);
         z-index: 9;
     }
     
     &__content {
-        padding-bottom: var(--gap-l);
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: var(--gap-xl);
         z-index: 9;
+
+        @include responsive.max(54rem) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0 auto;
+        }
     }
 
     &__about {
@@ -37,10 +45,18 @@
     }
 
     &__name {
+        
+        @include responsive.max(54rem) {
+            font-size: var(--font-size-2);
+        }
 
     }
 
     &__text {
+
+        @include responsive.max(54rem) {
+            font-size: 1.4rem;
+        }
 
     }
 
@@ -48,9 +64,17 @@
         display: flex;
         flex-direction: column;
         gap: var(--gap-m);
+
+        h5 {
+            @include responsive.max(54rem) {
+                font-size: var(--font-size-1);
+            }
+        }
+
     }
 
     &__copyright {
+        font-size: 1.1rem;
         text-align: center;
         padding-bottom: 2rem;
     }

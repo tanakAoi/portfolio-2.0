@@ -1,3 +1,5 @@
+@use '../utilities/responsive';
+
 .header,
 .hero,
 .about,
@@ -5,6 +7,10 @@
 .footer {
     display: grid;
     grid-template-columns: var(--grid-container);
+    
+    @include responsive.max(39rem) {
+        grid-template-columns: var(--grid-container-mobile);
+    }
 
     &__inner {
         grid-column: inner;
@@ -14,6 +20,10 @@
 .about,
 .contact {
     padding-top: var(--section-gap);
+
+    @include responsive.max(39rem) {
+        padding-top: var(--gap-xl);
+    }
 }
 
 .contact {
