@@ -89,9 +89,8 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: var(--color-light);
+    background-color: transparent;
     padding: 0.8rem 0.8rem 0.4rem 0.8rem;
-    border-radius: 10px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s;
@@ -99,6 +98,22 @@
     svg {
         width: 1.5rem;
         height: 1.5rem;
+    }
+
+    &:hover  {
+        animation: moving-arrow-up 0.8s infinite;
+        
+       @keyframes moving-arrow-up {
+
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-10px);
+        }
+        
+       } 
     }
 
     &--show {

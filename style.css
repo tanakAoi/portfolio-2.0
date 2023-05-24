@@ -71,8 +71,9 @@ body.dark .menu__link {
 body.dark .menu__link:hover {
   color: var(--color-accent);
 }
-body.dark .title__icon path {
-  fill: #f2f2f2;
+body.dark .title__icon path,
+body.dark .scroll-to-top path {
+  fill: var(--color-light);
 }
 
 p {
@@ -402,9 +403,8 @@ li {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: var(--color-light);
+  background-color: transparent;
   padding: 0.8rem 0.8rem 0.4rem 0.8rem;
-  border-radius: 10px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s;
@@ -412,6 +412,17 @@ li {
 .scroll-to-top svg {
   width: 1.5rem;
   height: 1.5rem;
+}
+.scroll-to-top:hover {
+  animation: moving-arrow-up 0.8s infinite;
+}
+@keyframes moving-arrow-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 .scroll-to-top--show {
   opacity: 1;
@@ -523,9 +534,9 @@ li {
   padding-left: 5px;
   top: 7px;
   cursor: pointer;
-  animation: moving-arrow 0.8s infinite;
+  animation: moving-arrow-down 0.8s infinite;
 }
-@keyframes moving-arrow {
+@keyframes moving-arrow-down {
   0% {
     top: 7px;
   }
