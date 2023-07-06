@@ -11,18 +11,16 @@
             gap: var(--gap-xl);
         }
     }
-
-    &__intro,
+    
+    &__title,
+    &__facts,
     &__skills,
     &__ability {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    &__intro {
-    }
-
+    
     &__skills,
     &__ability {
         gap: var(--gap-xl);
@@ -32,21 +30,18 @@
         }
     }
 
-}
-
-.intro {
-
     &__title {
-        padding-bottom: var(--gap-xl);
-        text-align: center;
-        line-height: 2;
 
         @include responsive.max(64rem) {
             max-width: 30rem;
             width: 100%;
         }
     }
-    
+
+}
+
+.facts {
+
     &__text {
         font-weight: 700;
         padding-bottom: var(--gap-m);
@@ -99,20 +94,23 @@
             height: 100%;
         }
 
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+        
+            &::before {
+                content: "😎";
+                display: inline-block;
+                position: absolute;
+                top: 1.5px;
+                left: -45px;
+            }
+
+        }
+
     }
 
     &__item {
-        margin-bottom: 0.8rem;
-        position: relative;
-        
-        &::before {
-            content: "😎";
-            display: inline-block;
-            position: absolute;
-            top: 1.5px;
-            left: -45px;
-        }
-
     }
 }
 
@@ -143,33 +141,8 @@
 
     }
 
-    &__webdev {
-
-    }
-
-    &__design {
-
-    }
-
-}
-
-.webdev,
-.design {
-
-    &__title {
-        margin-bottom: var(--gap-m);
-        display: flex;
-        gap: var(--gap-s);
-    }
-
-    &__list {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap-s);
-    }
-
-    &__item {
+    &__webdev li,
+    &__design li {
         width: fit-content;
         position: relative;
 
@@ -204,18 +177,7 @@
         }
     }
 
-}
-
-.webdev {
-
-    &__title {
-    }
-
-    &__list {
-
-    }
-
-    &__item {
+    &__webdev li {
         
         &:nth-of-type(1):hover::after {
             background-color: #E44D26;
@@ -245,22 +207,10 @@
         &:nth-of-type(7):hover::after {
             background-color: #F29111;
         }
-
+    
     }
 
-}
-
-.design {
-
-    &__title {
-
-    }
-
-    &__list {
-
-    }
-
-    &__item {
+    &__design li {
         
         &:nth-of-type(1):hover::after {
             background-color: #dd47dd;
@@ -272,6 +222,46 @@
 
         &:nth-of-type(3):hover::after {
             background-color: #35cbf4;
+        }
+    }
+
+}
+
+.webdev,
+.design {
+
+    &__title {
+        margin-bottom: var(--gap-m);
+        display: flex;
+        gap: var(--gap-s);
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-s);
+    }
+
+}
+
+.webdev {
+
+    &__title {
+
+        &::before {
+            content: url(src/assets/icons/laptop-code-solid.svg);
+        }
+    }
+
+}
+
+.design {
+
+    &__title {
+        
+        &::before {
+            content: url(src/assets/icons/palette-solid.svg);
         }
 
     }
@@ -334,6 +324,20 @@
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            border: 1px solid var(--color-light);
+
+            @include responsive.max(39rem) {
+                display: none;
+            }
+        }
     }
     
     &__image {
