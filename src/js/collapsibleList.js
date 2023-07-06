@@ -1,12 +1,12 @@
 const collapsibleList = () => {
 
-    const listTitle = document.querySelector('.intro__text')
-    const aboutList = document.querySelector('intro__list')
+    const listTitle = document.querySelector('.facts__text')
+    const aboutList = document.querySelector('facts__list')
 
     const addIconToList = () => {
 
         const buttonEl = document.createElement('span')
-        buttonEl.classList.add('material-symbols-outlined', 'intro__button')
+        buttonEl.classList.add('material-symbols-outlined', 'facts__button')
         buttonEl.innerText = 'expand_more'
 
         listTitle.append(buttonEl)
@@ -19,7 +19,7 @@ const collapsibleList = () => {
 
         const sibling = event.target.parentElement.nextElementSibling
 
-        sibling.classList.toggle('intro__list--open')
+        sibling.classList.toggle('facts__list--open')
 
         const expandIcon = event.target
 
