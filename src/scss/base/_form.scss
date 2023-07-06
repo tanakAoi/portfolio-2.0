@@ -26,11 +26,6 @@ input {
             border-color: var(--color-accent);
         }
     }
-    
-    &[type="submit"] {
-        @include button.default();
-        width: 10rem;
-    }
 
 }
 
@@ -52,4 +47,8 @@ textarea {
         border-color: var(--color-accent);
     }
     
+}
+
+button {
+    @include button.default();
 }
